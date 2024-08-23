@@ -1,0 +1,38 @@
+syntax = "proto3";
+
+package object;
+option go_package  = "github.com/Mungrel/objects/object";
+
+import "google/protobuf/timestamp.proto";
+
+// The Object service definition.
+service Object {
+  // Creates a new object.
+  rpc CreateObject (CreateObjectRequest) returns (CreateObjectResponse) {}
+
+  // Lists all objects.
+  rpc ListObjects (ListObjectsRequest) returns (ListObjectsResponse) {}
+}
+  
+message CreateObjectRequest {
+  string name = 1;
+  string content = 2;
+}
+
+message ObjectRecord {
+  string id = 1;
+  string name = 2;
+  string content = 3;
+  google.protobuf.Timestamp created_at = 4;
+  google.protobuf.Timestamp updated_at = 5;
+}
+
+message CreateObjectResponse {
+  ObjectRecord object = 1;
+}
+
+message ListObjectsRequest {}
+
+message ListObjectsResponse {
+  repeated ObjectRecord objects = 1;
+}

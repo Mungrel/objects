@@ -1,0 +1,11 @@
+{
+    "workbench.startupEditor": "none",
+    "explorer.confirmDragAndDrop": false,
+    "explorer.confirmDelete": false,
+    "go.lintOnSave": "package",
+    "go.lintTool": "golangci-lint",
+    "go.lintFlags": ["--fix"],
+    "go.useLanguageServer": true,
+    "go.coverOnTestPackage": false,
+    "files.insertFinalNewline": true,
+}

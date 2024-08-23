@@ -1,0 +1,16 @@
+linters:
+  enable:
+    - gci
+
+linters-settings:
+  gci:
+    skip-generated: true
+    sections:
+      - standard
+      - default
+      - prefix(github.com/Mungrel/objects)
+    custom-order: true
+
+issues:
+  exclude-dirs:
+    - internal/proto
